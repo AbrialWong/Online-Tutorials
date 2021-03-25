@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div id="textBox">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+
+        <p id="headerTop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+
+        <p class="greenBorder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+
+    </div>
+    <!--Import jquery library 1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function () {
+
+            $("p").css("border", "3px red dotted");
+            $("#headerTop").css("border", "1px blue solid");
+            $(".greenBorder").css("border", "2px green dashed");
+        });
+    </script>
+</body>
+
+</html>

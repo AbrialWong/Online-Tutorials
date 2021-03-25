@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    
+    <style>
+        #textBox{
+            display:none;
+        }
+    </style>
+    
+</head>
+<body>
+    <a href="#" id="fade-in">Fade In</a> |<a href="#" id="fade-out">Fade Out</a>
+    <div id="textBox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+    <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <!--Import jquery library 1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+       $("#fade-in").on("click", function(){
+           $("#textBox").fadeIn(3000, function(){
+               alert("I'm Done Fading In");
+           });
+       });
+
+       $("#fade-out").on("click", function(){
+           $("#textBox").fadeOut("fast", function(){
+               alert("I'm Done Fading Out");
+           });
+       });
+    });
+    </script> 
+</body>
+</html>

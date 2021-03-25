@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       #textBox{
+           width:200px;
+           height:200px;
+           background-color:lightsalmon;
+           position:absolute;
+           margin-top:20px;
+       }
+    </style>
+
+</head>
+
+<body>
+    <a href="#" id="grow">Grow</a> | <a href="#" id="move">Move</a> | <a href="#" id="bigger">Bigger</a> | <a href="#" id="many-things">Many Things</a> 
+    <div id="textBox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <!--Import jquery library 1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function () {
+
+            $("#grow").click(function(){
+                $("#textBox").animate({width:"500px"}, 1000);
+            });
+
+            $("#move").click(function(){
+                $("#textBox").animate({marginLeft:"500px"}, 1000);
+            });
+
+            $("#bigger").click(function(){
+                $("#textBox").animate({fontSize:"50px"}, 1000);
+            });
+
+            $("#many-things").click(function(){
+                $("#textBox").animate({fontSize:"50px", width:"600px", marginLeft:"200px"}, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
